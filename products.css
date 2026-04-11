@@ -1,0 +1,166 @@
+/* ══════════════════════════════════════════
+   products.css — IC Tech World Products Page
+   Page-specific styles (imports shared.css)
+══════════════════════════════════════════ */
+
+/* ── PAGE HEADER BANNER ── */
+.products-page-hero {
+  padding-top: var(--nav-h);
+  background: linear-gradient(180deg, rgba(0,30,70,0.5) 0%, transparent 100%);
+  border-bottom: 1px solid var(--c-border);
+}
+.products-page-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.products-page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 900;
+  color: #fff;
+}
+.products-page-hero h1 span {
+  background: linear-gradient(90deg, var(--c-blue), var(--c-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.products-page-hero p {
+  font-size: 0.88rem;
+  color: var(--c-muted);
+  margin-top: 0.4rem;
+}
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--c-cyan);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--c-border);
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.back-home:hover { background: rgba(0,255,247,0.08); border-color: var(--c-cyan); }
+
+/* ── SEARCH BAR ── */
+.search-bar-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 0;
+}
+.search-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--c-panel);
+  border: 1px solid var(--c-border);
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  max-width: 500px;
+  transition: border-color 0.3s;
+}
+.search-input-group:focus-within { border-color: var(--c-cyan); box-shadow: 0 0 12px rgba(0,255,247,0.15); }
+.search-input-group span { font-size: 1rem; }
+.search-input-group input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--c-text);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  flex: 1;
+}
+.search-input-group input::placeholder { color: var(--c-muted); }
+
+/* ── CATEGORY TABS ── */
+.cat-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+.cat-section-title {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  color: var(--c-muted);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.cat-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.cat-tab {
+  background: rgba(0,170,255,0.07);
+  border: 1px solid var(--c-border);
+  color: var(--c-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-body);
+}
+.cat-tab:hover { color: var(--c-text); border-color: rgba(0,170,255,0.4); }
+.cat-tab.active {
+  background: linear-gradient(135deg, var(--c-blue), var(--c-cyan));
+  color: #000;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+/* ── PRODUCTS GRID ── */
+.all-products-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+}
+.products-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.products-count {
+  font-size: 0.8rem;
+  color: var(--c-muted);
+}
+.products-count span { color: var(--c-cyan); font-weight: 700; }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+/* no results */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--c-muted);
+  grid-column: 1 / -1;
+}
+.no-results span { font-size: 3rem; display: block; margin-bottom: 1rem; }
+.no-results p { font-size: 0.9rem; }
+
+/* ── RESPONSIVE ── */
+@media(max-width: 600px) {
+  .products-page-hero-inner { flex-direction: column; align-items: flex-start; }
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .product-img { height: 120px; font-size: 2.2rem; }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>All Products – IC Tech World</title>
+<link rel="stylesheet" href="shared.css"/>
+<link rel="stylesheet" href="products.css"/>
+</head>
+<body>
+
+<!-- Background -->
+<canvas id="bg-canvas"></canvas>
+<div class="grid-overlay"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#00fff7" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">IC TECH<span>WORLD</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About Us</a></li>
+    <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="index.html#packages">Network Packages</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+    <li><a href="index.html#contact" class="btn-contact">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"          onclick="closeMobile()">Home</a>
+  <a href="index.html#about"    onclick="closeMobile()">About Us</a>
+  <a href="products.html"       onclick="closeMobile()">Products</a>
+  <a href="index.html#packages" onclick="closeMobile()">Network Packages</a>
+  <a href="index.html#reviews"  onclick="closeMobile()">Reviews</a>
+  <a href="index.html#contact"  class="btn-contact" onclick="closeMobile()">Contact Us</a>
+</div>
+
+<div class="page">
+
+  <!-- ══ PAGE HEADER ══ -->
+  <div class="products-page-hero">
+    <div class="products-page-hero-inner">
+      <div>
+        <h1>All <span>Products</span></h1>
+        <p>Browse our complete catalog — cameras, networking, accessories & more</p>
+      </div>
+      <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+  </div>
+
+  <!-- ══ SEARCH ══ -->
+  <div class="search-bar-wrap">
+    <div class="search-input-group">
+      <span>🔍</span>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products by name, category..."
+        autocomplete="off"
+      />
+    </div>
+  </div>
+
+  <!-- ══ CATEGORY TABS ══ -->
+  <div class="cat-section">
+    <div class="cat-section-title">Filter by Category</div>
+    <div class="cat-tabs" id="catTabs"></div>
+  </div>
+
+  <!-- ══ PRODUCTS GRID ══ -->
+  <div class="all-products-wrap">
+    <div class="products-meta">
+      <div class="products-count" id="productCount"></div>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+
+</div><!-- end .page -->
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00fff7" stroke-width="2" width="22" height="22">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">IC TECH<span>WORLD</span></div>
+      </a>
+      <p>Imran Communication — Your trusted partner in tech &amp; connectivity since August 1997. Serving Karachi with quality products and reliable network solutions.</p>
+      <div class="social-links">
+        <a href="https://wa.me/923163041828" target="_blank" class="social-link" title="WhatsApp">💬</a>
+        <a href="mailto:info@ictech.pk" class="social-link" title="Email">✉️</a>
+        <a href="#" class="social-link" title="Facebook">📘</a>
+        <a href="#" class="social-link" title="Instagram">📷</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html#packages">Network Packages</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="products.html">Android Box</a></li>
+        <li><a href="products.html">Cameras</a></li>
+        <li><a href="products.html">CCTV Solutions</a></li>
+        <li><a href="products.html">Networking Products</a></li>
+        <li><a href="products.html">Fiber / Optic Wire</a></li>
+        <li><a href="products.html">Router / Switch</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/923163041828">+92 316 3041828</a></li>
+        <li><a href="mailto:info@ictech.pk">info@ictech.pk</a></li>
+        <li><a href="index.html#contact">Ghulshan Market, Korangi 05, Karachi</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <span>IC Tech World – Imran Communication</span>. All rights reserved.</p>
+    <p>Designed with <span>♥</span> for Pakistan's tech community</p>
+  </div>
+</footer>
+
+<!-- Scroll Top Arrow -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- Floating WhatsApp (stacked below scroll-top on right side) -->
+<a href="https://wa.me/923163041828?text=Hello%20IC%20Tech%20World!%20I%20need%20assistance." target="_blank" class="float-wa" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="shared.js"></script>
+<script src="products.js"></script>
+</body>
+</html>

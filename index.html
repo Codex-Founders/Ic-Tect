@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IC Tech World – Imran Communication</title>
+<link rel="stylesheet" href="shared.css"/>
+<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+<!-- Background -->
+<canvas id="bg-canvas"></canvas>
+<div class="grid-overlay"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#00fff7" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">IC TECH<span>WORLD</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#packages">Network Packages</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact" class="btn-contact">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home"     onclick="closeMobile()">Home</a>
+  <a href="#about"    onclick="closeMobile()">About Us</a>
+  <a href="#products" onclick="closeMobile()">Products</a>
+  <a href="#packages" onclick="closeMobile()">Network Packages</a>
+  <a href="#reviews"  onclick="closeMobile()">Reviews</a>
+  <a href="#contact"  class="btn-contact" onclick="closeMobile()">Contact Us</a>
+</div>
+
+<div class="page">
+
+  <!-- ══ HERO ══ -->
+  <section id="home">
+    <div class="hero-inner">
+      <div class="globe-wrap">
+        <canvas id="globeCanvas" width="420" height="420"></canvas>
+      </div>
+      <div class="hero-text">
+        <div class="hero-tag">Karachi, Pakistan</div>
+        <h1 class="hero-title">
+          Welcome to<br>
+          <span class="line2">IC Tech World</span>
+        </h1>
+        <p class="hero-subtitle">
+          Your trusted partner in tech &amp; connectivity. Premium computer accessories, professional cameras, and cutting-edge fiber optics networking solutions since 1997.
+        </p>
+        <div class="hero-btns">
+          <a href="#products" class="btn-primary">Explore Products</a>
+          <a href="#packages" class="btn-outline">View Packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about" class="sec-border">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">About <span class="hl">Imran Communication</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card">
+            <p style="font-size:0.78rem;color:var(--c-cyan);font-family:var(--font-display);letter-spacing:2px;margin-bottom:1rem;">EST. AUGUST 1997</p>
+            <p style="font-size:0.88rem;color:var(--c-muted);line-height:1.7;">From a small vision to a trusted name in tech — serving businesses, IT professionals, photographers &amp; enthusiasts across Karachi.</p>
+            <div class="about-stat-grid">
+              <div class="about-stat"><span class="num">27+</span><span class="lbl">Years of Trust</span></div>
+              <div class="about-stat"><span class="num">5K+</span><span class="lbl">Happy Clients</span></div>
+              <div class="about-stat"><span class="num">500+</span><span class="lbl">Products</span></div>
+              <div class="about-stat"><span class="num">24/7</span><span class="lbl">Support</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h3>Your One-Stop Tech Destination</h3>
+          <p>Welcome to Imran Communication—your one-stop destination for high-quality computer accessories, professional cameras, and cutting-edge fiber optics networking solutions. Since our inception, we've been dedicated to empowering businesses, IT professionals, photographers, and tech enthusiasts with reliable, innovative, and affordable technology.</p>
+          <h3>Our Mission</h3>
+          <p>At Imran Communication, we bridge the gap between technology and everyday needs. Whether you're upgrading your workstation, building a high-speed network, or capturing life's moments with precision, we provide:</p>
+          <ul class="about-bullets">
+            <li><strong>Premium Computer Accessories</strong> – Keyboards, mice, SSDs, adapters, and more.</li>
+            <li><strong>Professional &amp; Hobbyist Cameras</strong> – DSLRs, lenses, tripods, and accessories.</li>
+            <li><strong>Future-Ready Fiber Optics</strong> – Cables, transceivers, routers, and networking tools for seamless connectivity.</li>
+          </ul>
+          <p>We're committed to quality, performance, and customer satisfaction—ensuring you get the right tools to thrive in a digital world.</p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="hi-title">🔬 Expert Curation</div>
+              <div class="hi-desc">Our team tests and selects products for durability and performance.</div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">💰 Competitive Pricing</div>
+              <div class="hi-desc">Top-tier tech without the premium markup.</div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">🚀 Fast &amp; Reliable</div>
+              <div class="hi-desc">Quick deliveries and hassle-free support always.</div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">🏢 For Everyone</div>
+              <div class="hi-desc">Home users to enterprise IT teams — we've got you covered.</div>
+            </div>
+          </div>
+          <h3>Let's Connect</h3>
+          <p>Have questions or need recommendations? Reach out at <a href="mailto:info@ictech.pk" style="color:var(--c-cyan)">info@ictech.pk</a> or visit us at our shop. Follow us on social media and WhatsApp for updates, deals, and tech tips!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRODUCTS (Featured) ══ -->
+  <section id="products" class="sec-border">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="section-label">Our Catalog</p>
+        <h2 class="section-title">Featured <span class="hl">Products</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="products-header">
+        <div></div>
+        <a href="products.html" class="btn-see-all">See All Products →</a>
+      </div>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- ══ PACKAGES ══ -->
+  <section id="packages" class="sec-border">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="section-label">Connectivity Plans</p>
+        <h2 class="section-title">Internet <span class="hl">Packages</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="packages-grid">
+        <!-- Starter -->
+        <div class="pkg-card low">
+          <div class="pkg-tier">Basic</div>
+          <div class="pkg-name">Starter</div>
+          <div class="pkg-speed">10 <span class="pkg-speed-unit">Mbps</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><span class="check">✓</span> 10 Mbps Speed</li>
+            <li><span class="check">✓</span> Up to 3 Mobile Devices</li>
+            <li><span class="check">✓</span> Basic Streaming</li>
+            <li><span class="check">✓</span> Email &amp; Browsing</li>
+          </ul>
+          <div class="pkg-price">Monthly Price</div>
+          <div class="pkg-price-val">Rs. 1,500/mo</div>
+          <a href="https://wa.me/923163041828?text=Hello%20IC%20Tech%20World!%20I%20am%20interested%20in%20Starter%20Package%20(10Mbps%20-%20Rs.1500/mo)" target="_blank" class="btn-subscribe">Subscribe Now</a>
+        </div>
+        <!-- Connect -->
+        <div class="pkg-card mid featured">
+          <div class="pkg-badge">POPULAR</div>
+          <div class="pkg-tier">Standard</div>
+          <div class="pkg-name">Connect</div>
+          <div class="pkg-speed">25 <span class="pkg-speed-unit">Mbps</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><span class="check">✓</span> 25 Mbps Speed</li>
+            <li><span class="check">✓</span> Up to 8 Mobile Devices</li>
+            <li><span class="check">✓</span> HD Streaming</li>
+            <li><span class="check">✓</span> Gaming &amp; Work from Home</li>
+          </ul>
+          <div class="pkg-price">Monthly Price</div>
+          <div class="pkg-price-val">Rs. 2,800/mo</div>
+          <a href="https://wa.me/923163041828?text=Hello%20IC%20Tech%20World!%20I%20am%20interested%20in%20Connect%20Package%20(25Mbps%20-%20Rs.2800/mo)" target="_blank" class="btn-subscribe">Subscribe Now</a>
+        </div>
+        <!-- Turbo -->
+        <div class="pkg-card high">
+          <div class="pkg-tier">Advanced</div>
+          <div class="pkg-name">Turbo</div>
+          <div class="pkg-speed">50 <span class="pkg-speed-unit">Mbps</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><span class="check">✓</span> 50 Mbps Speed</li>
+            <li><span class="check">✓</span> Up to 15 Mobile Devices</li>
+            <li><span class="check">✓</span> 4K Streaming</li>
+            <li><span class="check">✓</span> Multi-Device Heavy Use</li>
+          </ul>
+          <div class="pkg-price">Monthly Price</div>
+          <div class="pkg-price-val">Rs. 4,500/mo</div>
+          <a href="https://wa.me/923163041828?text=Hello%20IC%20Tech%20World!%20I%20am%20interested%20in%20Turbo%20Package%20(50Mbps%20-%20Rs.4500/mo)" target="_blank" class="btn-subscribe">Subscribe Now</a>
+        </div>
+        <!-- Fiber Pro -->
+        <div class="pkg-card premium">
+          <div class="pkg-tier">Enterprise</div>
+          <div class="pkg-name">Fiber Pro</div>
+          <div class="pkg-speed">100 <span class="pkg-speed-unit">Mbps</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><span class="check">✓</span> 100 Mbps Fiber Speed</li>
+            <li><span class="check">✓</span> Unlimited Devices</li>
+            <li><span class="check">✓</span> Business Grade SLA</li>
+            <li><span class="check">✓</span> Dedicated Support Line</li>
+          </ul>
+          <div class="pkg-price">Monthly Price</div>
+          <div class="pkg-price-val">Rs. 8,000/mo</div>
+          <a href="https://wa.me/923163041828?text=Hello%20IC%20Tech%20World!%20I%20am%20interested%20in%20Fiber%20Pro%20Package%20(100Mbps%20-%20Rs.8000/mo)" target="_blank" class="btn-subscribe">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ REVIEWS ══ -->
+  <section id="reviews" class="sec-border">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="section-label">Customer Feedback</p>
+        <h2 class="section-title">What People <span class="hl">Say</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="reviews-track-wrap">
+        <div class="reviews-track" id="reviewsTrack"></div>
+      </div>
+      <div style="text-align:center;margin-bottom:2.5rem;">
+        <button class="btn-outline" onclick="toggleAddReview()">+ Add Your Review</button>
+      </div>
+      <div class="add-review-wrap" id="addReviewWrap" style="display:none;">
+        <h3>Share Your Experience</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="rName" placeholder="Enter your name"/>
+          </div>
+          <div class="form-group">
+            <label>Rating</label>
+            <div class="star-input" id="starInput">
+              <span class="star" data-v="1">★</span>
+              <span class="star" data-v="2">★</span>
+              <span class="star" data-v="3">★</span>
+              <span class="star" data-v="4">★</span>
+              <span class="star" data-v="5">★</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label>Your Review</label>
+          <textarea id="rText" placeholder="Tell us about your experience..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="postReview()">Post Review</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="sec-border">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Contact <span class="hl">Us</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Reach Out Directly</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <div class="ci-label">WHATSAPP / PHONE</div>
+              <div class="ci-val"><a href="https://wa.me/923163041828">+92 316 3041828</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="ci-label">EMAIL</div>
+              <div class="ci-val"><a href="mailto:info@ictech.pk">info@ictech.pk</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="ci-label">ADDRESS</div>
+              <div class="ci-val">Ghulshan Market, Near Jamma Masjid,<br>Korangi No. 05, Karachi</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">👤</div>
+            <div>
+              <div class="ci-label">OWNER</div>
+              <div class="ci-val">Imran (Imran Communication)</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-box">
+          <h3>Define Your Network Problem</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="cName" placeholder="Your name"/>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="cEmail" placeholder="your@email.com"/>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label>Your Address</label>
+            <input type="text" id="cAddr" placeholder="Your location / area"/>
+          </div>
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label>Describe Your Problem</label>
+            <textarea id="cProblem" placeholder="Describe your network issue, connectivity problem, or what you need..."></textarea>
+          </div>
+          <button class="btn-submit" onclick="listProblem()">List Problem →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end .page -->
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00fff7" stroke-width="2" width="22" height="22">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">IC TECH<span>WORLD</span></div>
+      </a>
+      <p>Imran Communication — Your trusted partner in tech &amp; connectivity since August 1997. Serving Karachi with quality products and reliable network solutions.</p>
+      <div class="social-links">
+        <a href="https://wa.me/923163041828" target="_blank" class="social-link" title="WhatsApp">💬</a>
+        <a href="mailto:info@ictech.pk" class="social-link" title="Email">✉️</a>
+        <a href="#" class="social-link" title="Facebook">📘</a>
+        <a href="#" class="social-link" title="Instagram">📷</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#packages">Network Packages</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="products.html">Android Box</a></li>
+        <li><a href="products.html">Cameras</a></li>
+        <li><a href="products.html">CCTV Solutions</a></li>
+        <li><a href="products.html">Networking Products</a></li>
+        <li><a href="products.html">Fiber / Optic Wire</a></li>
+        <li><a href="products.html">Router / Switch</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/923163041828">+92 316 3041828</a></li>
+        <li><a href="mailto:info@ictech.pk">info@ictech.pk</a></li>
+        <li><a href="#contact">Ghulshan Market, Korangi 05, Karachi</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <span>IC Tech World – Imran Communication</span>. All rights reserved.</p>
+    <p>Designed with <span>♥</span> for Pakistan's tech community</p>
+  </div>
+</footer>
+
+<!-- Scroll Top Arrow -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- Floating WhatsApp (below scroll-top on right) -->
+<a href="https://wa.me/923163041828?text=Hello%20IC%20Tech%20World!%20I%20need%20assistance." target="_blank" class="float-wa" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="shared.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
