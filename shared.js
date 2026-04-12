@@ -92,6 +92,68 @@ function showToast(msg) {
   draw();
 })();
 
+// ── PRODUCT MODAL ────────────────────────────────────────
+function createModal() {
+  if (document.getElementById('productModal')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.id = 'productModal';
+  overlay.innerHTML = `
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
+      <div class="modal-img" id="modalImg"></div>
+      <div class="modal-body">
+        <div class="modal-cat-badge" id="modalCat"></div>
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-desc" id="modalDesc"></div>
+        <div class="modal-price" id="modalPrice"></div>
+        <div class="modal-actions" id="modalActions"></div>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+}
+
+function openProductModal(p) {
+  createModal();
+  const msg = encodeURIComponent(
+    `*Order Request – IC Tech World*\n\nProduct: ${p.name}\nPrice: ${p.price}\nCategory: ${p.cat}\n\nDescription: ${p.desc}\n\nPlease confirm availability and share payment details. Thank you!`
+  );
+
+  document.getElementById('modalCat').textContent = p.cat;
+  document.getElementById('modalName').textContent = p.name;
+  document.getElementById('modalDesc').textContent = p.desc;
+  document.getElementById('modalPrice').textContent = p.price;
+
+  const imgEl = document.getElementById('modalImg');
+  if (p.image) {
+    imgEl.innerHTML = `<img src="${p.image}" alt="${p.name}"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <i class="${p.icon} modal-fa-icon" style="display:none"></i>`;
+  } else {
+    imgEl.innerHTML = `<i class="${p.icon} modal-fa-icon"></i>`;
+  }
+
+  document.getElementById('modalActions').innerHTML = `
+    <a class="btn-whatsapp" href="https://wa.me/${WA}?text=${msg}" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+    </a>`;
+
+  document.getElementById('productModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const overlay = document.getElementById('productModal');
+  if (overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
 // ── PRODUCT CARD HTML HELPER ─────────────────────────────
 // image field is OPTIONAL — if provided, shows photo; otherwise shows FA icon
 // Usage example with image:
@@ -101,19 +163,21 @@ function productCardHTML(p) {
     `*Order Request – IC Tech World*\n\nProduct: ${p.name}\nPrice: ${p.price}\nCategory: ${p.cat}\n\nDescription: ${p.desc}\n\nPlease confirm availability and share payment details. Thank you!`,
   );
 
+  const safeP = encodeURIComponent(JSON.stringify(p));
+
   const imgHTML = p.image
     ? `<img src="${p.image}" alt="${p.name}" class="product-img-photo"
          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
        ><i class="${p.icon} product-fa-icon" style="display:none"></i>`
     : `<i class="${p.icon} product-fa-icon"></i>`;
 
-  return `<div class="product-card">
+  return `<div class="product-card" onclick="openProductModal(JSON.parse(decodeURIComponent('${safeP}')))" style="cursor:pointer;">
     <div class="product-img">${imgHTML}</div>
     <div class="product-info">
       <div class="product-name">${p.name}</div>
       <div class="product-desc">${p.desc}</div>
       <div class="product-price">${p.price}</div>
-      <a class="btn-whatsapp" href="https://wa.me/${WA}?text=${msg}" target="_blank">
+      <a class="btn-whatsapp" href="https://wa.me/${WA}?text=${msg}" target="_blank" onclick="event.stopPropagation()">
         <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
       </a>
     </div>
