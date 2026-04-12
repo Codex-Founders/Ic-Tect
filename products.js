@@ -64,7 +64,7 @@ function renderProducts() {
   // Render cards or no-results
   if (filtered.length === 0) {
     grid.innerHTML = `<div class="no-results">
-      <span>🔍</span>
+      <i class="fa-solid fa-magnifying-glass no-results-icon"></i>
       <p>No products found for "<strong>${searchQuery || activeCat}</strong>"</p>
     </div>`;
   } else {

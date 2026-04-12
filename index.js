@@ -77,13 +77,15 @@ function listProblem() {
   const addr  = document.getElementById('cAddr').value.trim();
   const prob  = document.getElementById('cProblem').value.trim();
   if (!name || !prob) { showToast('Please fill in your name and problem description.'); return; }
-  const msg = `Hello IC Tech World!%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email || 'N/A')}%0AAddress: ${encodeURIComponent(addr || 'N/A')}%0A%0AProblem: ${encodeURIComponent(prob)}`;
+  const msg = encodeURIComponent(
+    `*Problem Report – IC Tech World*\n\nName: ${name}\nEmail: ${email || 'N/A'}\nAddress: ${addr || 'N/A'}\n\nProblem Description:\n${prob}\n\nPlease help me resolve this issue. Thank you!`
+  );
   window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
   document.getElementById('cName').value = '';
   document.getElementById('cEmail').value = '';
   document.getElementById('cAddr').value = '';
   document.getElementById('cProblem').value = '';
-  showToast('Redirecting to WhatsApp... ✅');
+  showToast('Redirecting to WhatsApp...');
 }
 
 // ── ANIMATED GLOBE ───────────────────────────────────────

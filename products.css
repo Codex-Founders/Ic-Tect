@@ -71,7 +71,7 @@
   transition: border-color 0.3s;
 }
 .search-input-group:focus-within { border-color: var(--c-cyan); box-shadow: 0 0 12px rgba(0,255,247,0.15); }
-.search-input-group span { font-size: 1rem; }
+.search-input-group i { font-size: 0.9rem; color: var(--c-muted); }
 .search-input-group input {
   background: none;
   border: none;
@@ -155,7 +155,7 @@
   color: var(--c-muted);
   grid-column: 1 / -1;
 }
-.no-results span { font-size: 3rem; display: block; margin-bottom: 1rem; }
+.no-results-icon { font-size: 3rem; display: block; margin-bottom: 1rem; color: var(--c-muted); }
 .no-results p { font-size: 0.9rem; }
 
 /* ── RESPONSIVE ── */

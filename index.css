@@ -177,6 +177,9 @@
   font-weight: 700;
   color: var(--c-cyan);
   margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .highlight-item .hi-desc {
   font-size: 0.75rem;
@@ -459,6 +462,7 @@
   display: flex; align-items: center; justify-content: center;
   font-size: 1.2rem;
   flex-shrink: 0;
+  color: var(--c-cyan);
 }
 .contact-item .ci-label {
   font-size: 0.7rem;
