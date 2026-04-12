@@ -3,7 +3,7 @@
    Common JS used by index.html & products.html
 ══════════════════════════════════════════ */
 
-const WA = "923163041828";
+const WA = "923193921895";
 
 // ── HAMBURGER / MOBILE MENU ──────────────────────────────
 const ham = document.getElementById("hamburger");
