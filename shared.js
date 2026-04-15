@@ -183,24 +183,7 @@ function productCardHTML(p) {
     </div>
   </div>`;
 }
-// ══════════════════════════════════════════════════════════
-// ── SHARED PRODUCT DATA ───────────────────────────────────
-// HOW TO ADD A NEW PRODUCT:
-// Copy one product line and paste it in the correct category section.
-// Fields:
-//   cat   → Category (must match exactly from categories list in products.js)
-//   name  → Product name
-//   desc  → Short description
-//   price → Price string e.g. "Rs. 3,500"
-//   icon  → Font Awesome icon class e.g. "fa-solid fa-tv"
-//
-// Available categories:
-//   "Android Box" | "Cameras" | "CCTV Solution" | "Computer"
-//   "Electric / Solar" | "Fiber / Optic Wire" | "Mobile Accessories"
-//   "Network Connector" | "Networking Products" | "Router / Switch"
-//
-// Example:
-// { cat: "Computer", name: "USB Hub 7-Port", desc: "USB 3.0, 7 ports with switches.", price: "Rs. 1,800", icon: "fa-solid fa-plug" },
+// All Products
 // ══════════════════════════════════════════════════════════
 const allProducts = [
   // ── Android Box ─────────────────────────────────────────
